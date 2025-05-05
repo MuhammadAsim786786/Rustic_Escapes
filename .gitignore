@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Node modules
 node_modules/
 
@@ -29,3 +30,6 @@ yarn-error.log*
 
 # Optional: if using TypeScript
 *.tsbuildinfo
+=======
+node_modules/
+>>>>>>> master
