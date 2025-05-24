@@ -1,9 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-<<<<<<< HEAD
-=======
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
->>>>>>> origin/final-3
 
 import GlobalStyles from "./styles/GlobalStyles";
 import Dashboard from "./pages/Dashboard";
@@ -15,12 +12,6 @@ import Account from "./pages/Account";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./ui/AppLayout";
-<<<<<<< HEAD
-
-function App() {
-  return (
-    <>
-=======
 import { Toaster } from "react-hot-toast";
 
 const queryClient = new QueryClient({
@@ -37,7 +28,6 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
 
->>>>>>> origin/final-3
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
@@ -55,9 +45,6 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-<<<<<<< HEAD
-    </>
-=======
 
       <Toaster
         position="top-center"
@@ -80,7 +67,6 @@ function App() {
         }}
       />
     </QueryClientProvider>
->>>>>>> origin/final-3
   );
 }
 

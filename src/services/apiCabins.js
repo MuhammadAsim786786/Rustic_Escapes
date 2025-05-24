@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import supabase from "./supabase";
-=======
 import supabase, { supabaseUrl } from "./supabase";
->>>>>>> origin/final-3
 
 export async function getCabins() {
   const { data, error } = await supabase.from("cabins").select("*");
@@ -14,8 +10,6 @@ export async function getCabins() {
 
   return data;
 }
-<<<<<<< HEAD
-=======
 
 export async function createEditCabin(newCabin, id) {
   const hasImagePath = newCabin.image?.startsWith?.(supabaseUrl);
@@ -73,4 +67,3 @@ export async function deleteCabin(id) {
 
   return data;
 }
->>>>>>> origin/final-3

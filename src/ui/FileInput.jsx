@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-<<<<<<< HEAD
-const FileInput = styled.input`
-=======
 const FileInput = styled.input.attrs({ type: "file" })`
->>>>>>> origin/final-3
   font-size: 1.4rem;
   border-radius: var(--border-radius-sm);
 
