@@ -1,31 +1,79 @@
 # Node modules
 node_modules/
-
-# Build output
-dist/
-dist-ssr/
-
-# Vite cache
-.vite/
+**/node_modules/
 
 # Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Environment variables
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Build directories
+build/
+dist/
+.next/
+.out/
+out/
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm/
+
+# dotenv environment variables
 .env
 .env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# IDE settings
+# Next.js specific
+.next/
+.next/cache/
+
+# Coverage
+coverage/
+*.lcov
+
+# IDEs and editors
 .vscode/
 .idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 
-# macOS system files
+# OS specific
+.DS_Store
+Thumbs.db
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Misc
+*.tgz
+.yarn-integrity
+.parcel-cache
+.cache/
+.cache-loader/
+
+# MongoDB database dumps
+dump/
+
+# Mac .DS_Store files
 .DS_Store
 
-# ESLint cache
-.eslintcache
-
-# Optional: if using TypeScript
-*.tsbuildinfo
+# JetBrains IDEs
+*.iml
+*.ipr
+*.iws
