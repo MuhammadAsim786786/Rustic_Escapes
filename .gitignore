@@ -1,51 +1,26 @@
-# Node modules
-node_modules/
-**/node_modules/
+# dependencies
+/node_modules/
 
-# Logs
-logs
-*.log
+# build output
+/dist/
+/build/
+
+# local env files
+.env
+.env.local
+.env.*.local
+
+# debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+# OS files
+.DS_Store
+Thumbs.db
 
-# Build directories
-build/
-dist/
-.next/
-.out/
-out/
-
-# Dependency directories
-jspm_packages/
-
-# Optional npm cache directory
-.npm/
-
-# dotenv environment variables
-.env
-.env.*.local
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Next.js specific
-.next/
-.next/cache/
-
-# Coverage
-coverage/
-*.lcov
-
-# IDEs and editors
+# editor/IDE settings
 .vscode/
 .idea/
 *.suo
@@ -53,27 +28,32 @@ coverage/
 *.njsproj
 *.sln
 
-# OS specific
-.DS_Store
-Thumbs.db
+# testing
+/coverage/
+/*.lcov
 
-# TypeScript cache
-*.tsbuildinfo
+# cache
+/.cache/
+/tmp/
+/out-tsc/
 
-# Misc
-*.tgz
-.yarn-integrity
-.parcel-cache
-.cache/
-.cache-loader/
+# optional npm cache folder
+.npm/
 
-# MongoDB database dumps
-dump/
+# lockfiles (if you switch between package managers)
+// yarn.lock
+// package-lock.json
 
-# Mac .DS_Store files
-.DS_Store
+# TypeScript build info (if you use TS)
+/*.tsbuildinfo
 
-# JetBrains IDEs
-*.iml
-*.ipr
-*.iws
+# Storybook
+/storybook-static/
+
+# logs
+logs
+*.log
+
+# Mac/Linux swap files
+*~
+*.sw?
