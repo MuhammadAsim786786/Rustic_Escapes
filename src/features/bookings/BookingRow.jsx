@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -32,12 +33,38 @@ import { format, isToday } from 'date-fns';
 //     border-bottom: 1px solid var(--color-grey-100);
 //   }
 // `;
+=======
+import styled from "styled-components";
+import { format, isToday } from "date-fns";
+import {
+  HiArrowDownOnSquare,
+  HiArrowUpOnSquare,
+  HiEye,
+  HiTrash,
+} from "react-icons/hi2";
+import { useNavigate } from "react-router-dom";
+
+import Tag from "../../ui/Tag";
+import Table from "../../ui/Table";
+import Modal from "../../ui/Modal";
+import Menus from "../../ui/Menus";
+import ConfirmDelete from "../../ui/ConfirmDelete";
+
+import { formatCurrency } from "../../utils/helpers";
+import { formatDistanceFromNow } from "../../utils/helpers";
+import { useCheckout } from "../check-in-out/useCheckout";
+import { useDeleteBooking } from "./useDeleteBooking";
+>>>>>>> origin/final-4
 
 const Cabin = styled.div`
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--color-grey-600);
+<<<<<<< HEAD
   font-family: 'Sono';
+=======
+  font-family: "Sono";
+>>>>>>> origin/final-4
 `;
 
 const Stacked = styled.div`
@@ -56,7 +83,11 @@ const Stacked = styled.div`
 `;
 
 const Amount = styled.div`
+<<<<<<< HEAD
   font-family: 'Sono';
+=======
+  font-family: "Sono";
+>>>>>>> origin/final-4
   font-weight: 500;
 `;
 
@@ -74,6 +105,7 @@ function BookingRow({
     cabins: { name: cabinName },
   },
 }) {
+<<<<<<< HEAD
   const { mutate: deleteBooking, isLoading: isDeleting } = useDeleteBooking();
   const { mutate: checkout, isLoading: isCheckingOut } = useCheckout();
 
@@ -89,6 +121,20 @@ function BookingRow({
 
   return (
     <Table.Row role='row'>
+=======
+  const navigate = useNavigate();
+  const { checkout, isCheckingOut } = useCheckout();
+  const { deleteBooking, isDeleting } = useDeleteBooking();
+
+  const statusToTagName = {
+    unconfirmed: "blue",
+    "checked-in": "green",
+    "checked-out": "silver",
+  };
+
+  return (
+    <Table.Row>
+>>>>>>> origin/final-4
       <Cabin>{cabinName}</Cabin>
 
       <Stacked>
@@ -99,6 +145,7 @@ function BookingRow({
       <Stacked>
         <span>
           {isToday(new Date(startDate))
+<<<<<<< HEAD
             ? 'Today'
             : formatDistanceFromNow(startDate)}{' '}
           &rarr; {numNights} night stay
@@ -114,36 +161,73 @@ function BookingRow({
       <Amount>{formatCurrency(totalPrice)}</Amount>
 
       {/* VIDEO we could export this into own component... */}
+=======
+            ? "Today"
+            : formatDistanceFromNow(startDate)}{" "}
+          &rarr; {numNights} night stay
+        </span>
+        <span>
+          {format(new Date(startDate), "MMM dd yyyy")} &mdash;{" "}
+          {format(new Date(endDate), "MMM dd yyyy")}
+        </span>
+      </Stacked>
+
+      <Tag type={statusToTagName[status]}>{status.replace("-", " ")}</Tag>
+
+      <Amount>{formatCurrency(totalPrice)}</Amount>
+
+>>>>>>> origin/final-4
       <Modal>
         <Menus.Menu>
           <Menus.Toggle id={bookingId} />
           <Menus.List id={bookingId}>
             <Menus.Button
+<<<<<<< HEAD
               onClick={() => navigate(`/bookings/${bookingId}`)}
               icon={<HiEye />}
+=======
+              icon={<HiEye />}
+              onClick={() => navigate(`/bookings/${bookingId}`)}
+>>>>>>> origin/final-4
             >
               See details
             </Menus.Button>
 
+<<<<<<< HEAD
             {status === 'unconfirmed' && (
               <Menus.Button
                 onClick={() => navigate(`/checkin/${bookingId}`)}
                 icon={<HiArrowDownOnSquare />}
+=======
+            {status === "unconfirmed" && (
+              <Menus.Button
+                icon={<HiArrowDownOnSquare />}
+                onClick={() => navigate(`/checkin/${bookingId}`)}
+>>>>>>> origin/final-4
               >
                 Check in
               </Menus.Button>
             )}
 
+<<<<<<< HEAD
             {status === 'checked-in' && (
               <Menus.Button
                 onClick={() => checkout(bookingId)}
                 disabled={isCheckingOut}
                 icon={<HiArrowUpOnSquare />}
+=======
+            {status === "checked-in" && (
+              <Menus.Button
+                icon={<HiArrowUpOnSquare />}
+                onClick={() => checkout(bookingId)}
+                disabled={isCheckingOut}
+>>>>>>> origin/final-4
               >
                 Check out
               </Menus.Button>
             )}
 
+<<<<<<< HEAD
             <Menus.Button icon={<HiPencil />}>Edit booking</Menus.Button>
             {/* <Menus.Button>Delete</Menus.Button> */}
 
@@ -178,6 +262,22 @@ function BookingRow({
 
         <Link to={`/bookings/${bookingId}`}>Details &rarr;</Link>
       </div> */}
+=======
+            <Modal.Open opens="delete">
+              <Menus.Button icon={<HiTrash />}>Delete booking</Menus.Button>
+            </Modal.Open>
+          </Menus.List>
+        </Menus.Menu>
+
+        <Modal.Window name="delete">
+          <ConfirmDelete
+            resourceName="booking"
+            disabled={isDeleting}
+            onConfirm={() => deleteBooking(bookingId)}
+          />
+        </Modal.Window>
+      </Modal>
+>>>>>>> origin/final-4
     </Table.Row>
   );
 }
