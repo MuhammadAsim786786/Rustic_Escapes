@@ -28,6 +28,7 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  console.log("Hello");
   return (
     <DarkModeProvider>
       <QueryClientProvider client={queryClient}>
