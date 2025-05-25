@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
-<<<<<<< HEAD
-import Uploader from "../data/Uploader";
-=======
->>>>>>> origin/final-stages
 
 const StyledSidebar = styled.aside`
   background-color: var(--color-grey-0);
@@ -22,11 +18,6 @@ function Sidebar() {
     <StyledSidebar>
       <Logo />
       <MainNav />
-<<<<<<< HEAD
-
-      <Uploader />
-=======
->>>>>>> origin/final-stages
     </StyledSidebar>
   );
 }
