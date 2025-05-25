@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import { useSearchParams } from "react-router-dom";
->>>>>>> origin/final-4
 import styled, { css } from "styled-components";
 
 const StyledFilter = styled.div`
@@ -37,8 +34,6 @@ const FilterButton = styled.button`
     color: var(--color-brand-50);
   }
 `;
-<<<<<<< HEAD
-=======
 
 function Filter({ filterField, options }) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -68,4 +63,3 @@ function Filter({ filterField, options }) {
 }
 
 export default Filter;
->>>>>>> origin/final-4

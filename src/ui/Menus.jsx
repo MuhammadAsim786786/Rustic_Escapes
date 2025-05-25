@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import styled from "styled-components";
-
-const StyledMenu = styled.div`
-=======
 import { createContext, useContext, useState } from "react";
 import { createPortal } from "react-dom";
 import { HiEllipsisVertical } from "react-icons/hi2";
@@ -10,7 +5,6 @@ import styled from "styled-components";
 import { useOutsideClick } from "../hooks/useOutsideClick";
 
 const Menu = styled.div`
->>>>>>> origin/final-4
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -70,8 +64,6 @@ const StyledButton = styled.button`
     transition: all 0.3s;
   }
 `;
-<<<<<<< HEAD
-=======
 
 const MenusContext = createContext();
 
@@ -149,4 +141,3 @@ Menus.List = List;
 Menus.Button = Button;
 
 export default Menus;
->>>>>>> origin/final-4

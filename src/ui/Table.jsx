@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import { createContext, useContext } from "react";
->>>>>>> origin/final-4
 import styled from "styled-components";
 
 const StyledTable = styled.div`
@@ -13,11 +10,7 @@ const StyledTable = styled.div`
   overflow: hidden;
 `;
 
-<<<<<<< HEAD
-const CommonRow = styled.header`
-=======
 const CommonRow = styled.div`
->>>>>>> origin/final-4
   display: grid;
   grid-template-columns: ${(props) => props.columns};
   column-gap: 2.4rem;
@@ -36,13 +29,6 @@ const StyledHeader = styled(CommonRow)`
   color: var(--color-grey-600);
 `;
 
-<<<<<<< HEAD
-const StyledBody = styled.section`
-  margin: 0.4rem 0;
-`;
-
-=======
->>>>>>> origin/final-4
 const StyledRow = styled(CommonRow)`
   padding: 1.2rem 2.4rem;
 
@@ -51,13 +37,10 @@ const StyledRow = styled(CommonRow)`
   }
 `;
 
-<<<<<<< HEAD
-=======
 const StyledBody = styled.section`
   margin: 0.4rem 0;
 `;
 
->>>>>>> origin/final-4
 const Footer = styled.footer`
   background-color: var(--color-grey-50);
   display: flex;

@@ -13,8 +13,6 @@ const StyledSelect = styled.select`
   font-weight: 500;
   box-shadow: var(--shadow-sm);
 `;
-<<<<<<< HEAD
-=======
 
 function Select({ options, value, onChange, ...props }) {
   return (
@@ -29,4 +27,3 @@ function Select({ options, value, onChange, ...props }) {
 }
 
 export default Select;
->>>>>>> origin/final-4

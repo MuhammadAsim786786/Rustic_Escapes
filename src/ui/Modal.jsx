@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import styled from "styled-components";
-=======
 import { cloneElement, createContext, useContext, useState } from "react";
 import { createPortal } from "react-dom";
 import { HiXMark } from "react-icons/hi2";
 import styled from "styled-components";
 import { useOutsideClick } from "../hooks/useOutsideClick";
->>>>>>> origin/final-4
 
 const StyledModal = styled.div`
   position: fixed;
@@ -56,8 +52,6 @@ const Button = styled.button`
     color: var(--color-grey-500);
   }
 `;
-<<<<<<< HEAD
-=======
 
 const ModalContext = createContext();
 
@@ -104,4 +98,3 @@ Modal.Open = Open;
 Modal.Window = Window;
 
 export default Modal;
->>>>>>> origin/final-4

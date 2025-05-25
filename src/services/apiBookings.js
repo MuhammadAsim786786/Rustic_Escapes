@@ -1,7 +1,5 @@
 import { getToday } from "../utils/helpers";
 import supabase from "./supabase";
-<<<<<<< HEAD
-=======
 import { PAGE_SIZE } from "../utils/constants";
 
 export async function getBookings({ filter, sortBy, page }) {
@@ -36,7 +34,6 @@ export async function getBookings({ filter, sortBy, page }) {
 
   return { data, count };
 }
->>>>>>> origin/final-4
 
 export async function getBooking(id) {
   const { data, error } = await supabase
