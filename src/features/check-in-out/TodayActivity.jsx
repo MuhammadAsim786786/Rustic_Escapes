@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { box } from 'styles/styles';
@@ -10,6 +11,23 @@ import { useActivityTodayStays } from './useActivityTodayStays';
 
 const StyledToday = styled.div`
   ${box}
+=======
+import styled from "styled-components";
+
+import Heading from "../../ui/Heading";
+import Row from "../../ui/Row";
+
+import { useTodayActivity } from "./useTodayActivity";
+import Spinner from "../../ui/Spinner";
+import TodayItem from "./TodayItem";
+
+const StyledToday = styled.div`
+  /* Box */
+  background-color: var(--color-grey-0);
+  border: 1px solid var(--color-grey-100);
+  border-radius: var(--border-radius-md);
+
+>>>>>>> origin/final-stages
   padding: 3.2rem;
   display: flex;
   flex-direction: column;
@@ -37,6 +55,7 @@ const NoActivity = styled.p`
   margin-top: 0.8rem;
 `;
 
+<<<<<<< HEAD
 function Today() {
   const { isLoading, stays } = useActivityTodayStays();
 
@@ -53,6 +72,22 @@ function Today() {
           <TodayList>
             {stays.map((stay) => (
               <TodayItem key={stay.id} stay={stay} />
+=======
+function TodayActivity() {
+  const { activities, isLoading } = useTodayActivity();
+
+  return (
+    <StyledToday>
+      <Row type="horizontal">
+        <Heading as="h2">Today</Heading>
+      </Row>
+
+      {!isLoading ? (
+        activities?.length > 0 ? (
+          <TodayList>
+            {activities.map((activity) => (
+              <TodayItem activity={activity} key={activity.id} />
+>>>>>>> origin/final-stages
             ))}
           </TodayList>
         ) : (
@@ -65,6 +100,7 @@ function Today() {
   );
 }
 
+<<<<<<< HEAD
 export default Today;
 
 const OLDdata = [
@@ -105,3 +141,6 @@ const OLDdata = [
     numNights: 4,
   },
 ];
+=======
+export default TodayActivity;
+>>>>>>> origin/final-stages

@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import { useDarkMode } from 'context/DarkModeContext';
 import { eachDayOfInterval, format, isSameDay, subDays } from 'date-fns';
+=======
+import styled from "styled-components";
+import DashboardBox from "./DashboardBox";
+import Heading from "../../ui/Heading";
+>>>>>>> origin/final-stages
 import {
   Area,
   AreaChart,
@@ -8,10 +14,16 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+<<<<<<< HEAD
 } from 'recharts';
 import styled from 'styled-components';
 import Heading from 'ui/Heading';
 import DashboardBox from './DashboardBox';
+=======
+} from "recharts";
+import { useDarkMode } from "../../context/DarkModeContext";
+import { eachDayOfInterval, format, isSameDay, subDays } from "date-fns";
+>>>>>>> origin/final-stages
 
 const StyledSalesChart = styled(DashboardBox)`
   grid-column: 1 / -1;
@@ -24,7 +36,10 @@ const StyledSalesChart = styled(DashboardBox)`
 `;
 
 function SalesChart({ bookings, numDays }) {
+<<<<<<< HEAD
   // In the chart we need to set colors, but we can't do it based on CSS variables, because we have no access to them here. So let's set them manually
+=======
+>>>>>>> origin/final-stages
   const { isDarkMode } = useDarkMode();
 
   const allDates = eachDayOfInterval({
@@ -34,7 +49,11 @@ function SalesChart({ bookings, numDays }) {
 
   const data = allDates.map((date) => {
     return {
+<<<<<<< HEAD
       label: format(date, 'MMM dd'),
+=======
+      label: format(date, "MMM dd"),
+>>>>>>> origin/final-stages
       totalSales: bookings
         .filter((booking) => isSameDay(date, new Date(booking.created_at)))
         .reduce((acc, cur) => acc + cur.totalPrice, 0),
@@ -46,6 +65,7 @@ function SalesChart({ bookings, numDays }) {
 
   const colors = isDarkMode
     ? {
+<<<<<<< HEAD
         totalSales: { stroke: '#4f46e5', fill: '#4f46e5' },
         extrasSales: { stroke: '#22c55e', fill: '#22c55e' },
         text: '#e5e7eb',
@@ -56,10 +76,23 @@ function SalesChart({ bookings, numDays }) {
         extrasSales: { stroke: '#16a34a', fill: '#dcfce7' },
         text: '#374151',
         background: '#fff',
+=======
+        totalSales: { stroke: "#4f46e5", fill: "#4f46e5" },
+        extrasSales: { stroke: "#22c55e", fill: "#22c55e" },
+        text: "#e5e7eb",
+        background: "#18212f",
+      }
+    : {
+        totalSales: { stroke: "#4f46e5", fill: "#c7d2fe" },
+        extrasSales: { stroke: "#16a34a", fill: "#dcfce7" },
+        text: "#374151",
+        background: "#fff",
+>>>>>>> origin/final-stages
       };
 
   return (
     <StyledSalesChart>
+<<<<<<< HEAD
       <Heading type='h2'>
         Sales from {format(allDates.at(0), 'MMM dd yyyy')} &mdash;{' '}
         {format(allDates.at(-1), 'MMM dd yyyy')}
@@ -70,10 +103,22 @@ function SalesChart({ bookings, numDays }) {
         <AreaChart data={data}>
           <XAxis
             dataKey='label'
+=======
+      <Heading as="h2">
+        Sales from {format(allDates.at(0), "MMM dd yyyy")} &mdash;{" "}
+        {format(allDates.at(-1), "MMM dd yyyy")}{" "}
+      </Heading>
+
+      <ResponsiveContainer height={300} width="100%">
+        <AreaChart data={data}>
+          <XAxis
+            dataKey="label"
+>>>>>>> origin/final-stages
             tick={{ fill: colors.text }}
             tickLine={{ stroke: colors.text }}
           />
           <YAxis
+<<<<<<< HEAD
             unit='$'
             tick={{ fill: colors.text }}
             tickLine={{ stroke: colors.text }}
@@ -101,6 +146,31 @@ function SalesChart({ bookings, numDays }) {
             strokeWidth={2}
             unit='$'
             name='Extras sales'
+=======
+            unit="$"
+            tick={{ fill: colors.text }}
+            tickLine={{ stroke: colors.text }}
+          />
+          <CartesianGrid strokeDasharray="4" />
+          <Tooltip contentStyle={{ backgroundColor: colors.background }} />
+          <Area
+            dataKey="totalSales"
+            type="monotone"
+            stroke={colors.totalSales.stroke}
+            fill={colors.totalSales.fill}
+            strokeWidth={2}
+            name="Total sales"
+            unit="$"
+          />
+          <Area
+            dataKey="extrasSales"
+            type="monotone"
+            stroke={colors.extrasSales.stroke}
+            fill={colors.extrasSales.fill}
+            strokeWidth={2}
+            name="Extras sales"
+            unit="$"
+>>>>>>> origin/final-stages
           />
         </AreaChart>
       </ResponsiveContainer>
@@ -109,6 +179,7 @@ function SalesChart({ bookings, numDays }) {
 }
 
 export default SalesChart;
+<<<<<<< HEAD
 
 const OLDdata = [
   { label: 'Jan 09', totalSales: 480, extrasSales: 320 - 300 },
@@ -141,3 +212,5 @@ const OLDdata = [
   { label: 'Feb 05', totalSales: 1400, extrasSales: 1100 - 500 },
   { label: 'Feb 06', totalSales: 1450, extrasSales: 900 - 500 },
 ];
+=======
+>>>>>>> origin/final-stages

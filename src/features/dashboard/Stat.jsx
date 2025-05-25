@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import styled from 'styled-components';
 import { box } from 'styles/styles';
 
 const StyledStat = styled.div`
   ${box}
+=======
+import styled from "styled-components";
+
+const StyledStat = styled.div`
+  /* Box */
+  background-color: var(--color-grey-0);
+  border: 1px solid var(--color-grey-100);
+  border-radius: var(--border-radius-md);
+>>>>>>> origin/final-stages
 
   padding: 1.6rem;
   display: grid;
@@ -43,7 +53,10 @@ const Value = styled.p`
   font-size: 2.4rem;
   line-height: 1;
   font-weight: 500;
+<<<<<<< HEAD
   /* color: var(--color-grey-600); */
+=======
+>>>>>>> origin/final-stages
 `;
 
 function Stat({ icon, title, value, color }) {
