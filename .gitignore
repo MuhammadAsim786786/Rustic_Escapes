@@ -1,64 +1,3 @@
-<<<<<<< HEAD
-# dependencies
-/node_modules/
-
-# build output
-/dist/
-/build/
-
-# local env files
-.env
-.env.local
-.env.*.local
-
-# debug logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# editor/IDE settings
-.vscode/
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-
-# testing
-/coverage/
-/*.lcov
-
-# cache
-/.cache/
-/tmp/
-/out-tsc/
-
-# optional npm cache folder
-.npm/
-
-# lockfiles (if you switch between package managers)
-// yarn.lock
-// package-lock.json
-
-# TypeScript build info (if you use TS)
-/*.tsbuildinfo
-
-# Storybook
-/storybook-static/
-
-# logs
-logs
-*.log
-
-# Mac/Linux swap files
-*~
-*.sw?
-=======
 # Node.js
 node_modules/
 npm-debug.log*
@@ -119,4 +58,3 @@ ehthumbs.db
 public/uploads/
 uploads/
 static/uploads/
->>>>>>> origin/final-stages

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import styled from 'styled-components';
-import { box } from 'styles/styles';
-
-const DashboardBox = styled.div`
-  ${box}
-=======
 import styled from "styled-components";
 
 const DashboardBox = styled.div`
@@ -13,7 +6,6 @@ const DashboardBox = styled.div`
   border: 1px solid var(--color-grey-100);
   border-radius: var(--border-radius-md);
 
->>>>>>> origin/final-stages
   padding: 3.2rem;
 
   display: flex;

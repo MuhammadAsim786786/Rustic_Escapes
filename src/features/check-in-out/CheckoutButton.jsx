@@ -1,10 +1,4 @@
 import Button from "../../ui/Button";
-<<<<<<< HEAD
-
-function CheckoutButton({ bookingId }) {
-  return (
-    <Button variation="primary" size="small">
-=======
 import { useCheckout } from "./useCheckout";
 
 function CheckoutButton({ bookingId }) {
@@ -17,7 +11,6 @@ function CheckoutButton({ bookingId }) {
       onClick={() => checkout(bookingId)}
       disabled={isCheckingOut}
     >
->>>>>>> origin/final-stages
       Check out
     </Button>
   );
