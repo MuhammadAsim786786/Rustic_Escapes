@@ -1,10 +1,7 @@
 import styled from "styled-components";
-<<<<<<< HEAD
-=======
 import Heading from "./Heading";
 import GlobalStyles from "../styles/GlobalStyles";
 import Button from "./Button";
->>>>>>> origin/final-stages
 
 const StyledErrorFallback = styled.main`
   height: 100vh;
@@ -35,8 +32,6 @@ const Box = styled.div`
     color: var(--color-grey-500);
   }
 `;
-<<<<<<< HEAD
-=======
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
     <>
@@ -55,4 +50,3 @@ function ErrorFallback({ error, resetErrorBoundary }) {
 }
 
 export default ErrorFallback;
->>>>>>> origin/final-stages

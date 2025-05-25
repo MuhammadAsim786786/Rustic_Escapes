@@ -27,8 +27,6 @@ const Heading = styled.h1`
       font-weight: 500;
     `}
     
-<<<<<<< HEAD
-=======
     ${(props) =>
     props.as === "h4" &&
     css`
@@ -37,7 +35,6 @@ const Heading = styled.h1`
       text-align: center;
     `}
     
->>>>>>> origin/final-stages
   line-height: 1.4;
 `;
 
