@@ -47,10 +47,7 @@ const Footer = styled.footer`
   justify-content: center;
   padding: 1.2rem;
 
-<<<<<<< HEAD
-=======
   /* This will hide the footer when it contains no child elements. Possible thanks to the parent selector :has 🎉 */
->>>>>>> origin/final-4
   &:not(:has(*)) {
     display: none;
   }
@@ -62,8 +59,6 @@ const Empty = styled.p`
   text-align: center;
   margin: 2.4rem;
 `;
-<<<<<<< HEAD
-=======
 
 const TableContext = createContext();
 
@@ -104,4 +99,3 @@ Table.Row = Row;
 Table.Footer = Footer;
 
 export default Table;
->>>>>>> origin/final-4
