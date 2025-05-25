@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import Button from 'ui/Button';
-import Modal from 'ui/Modal';
-import CreateCabinForm from './CreateCabinForm';
-
-function AddCabin() {
-  return (
-    <Modal>
-      <Modal.Toggle opens='new-cabin'>
-        <Button>Add new cabin</Button>
-      </Modal.Toggle>
-      <Modal.Window name='new-cabin'>
-        <CreateCabinForm />
-      </Modal.Window>
-    </Modal>
-  );
-}
-
-=======
 import Button from "../../ui/Button";
 import CreateCabinForm from "./CreateCabinForm";
 import Modal from "../../ui/Modal";
@@ -53,5 +34,4 @@ function AddCabin() {
 //   );
 // }
 
->>>>>>> origin/final-4
 export default AddCabin;

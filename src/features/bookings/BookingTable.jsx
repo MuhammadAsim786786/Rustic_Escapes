@@ -26,14 +26,6 @@ function BookingTable() {
           <div></div>
         </Table.Header>
 
-<<<<<<< HEAD
-        {/* {bookings.map((booking) => (
-            <BookingRow key={booking.id} booking={booking} />
-          ))} */}
-
-        {/* Render props! */}
-=======
->>>>>>> origin/final-4
         <Table.Body
           data={bookings}
           render={(booking) => (
@@ -49,10 +41,4 @@ function BookingTable() {
   );
 }
 
-<<<<<<< HEAD
-// We could create yet another layer of abstraction on top of this. We could call this component just <Results>, like: Results({data, count, isLoading, columns, rowComponent}). Then <BookingTable> and ALL other tables would simply call that.
-// BUT, creating more abstractions also has a cost! More things to remember, more complex codebase to understand. Sometimes it's okay to just copy and paste instead of creating abstractions
-
-=======
->>>>>>> origin/final-4
 export default BookingTable;
